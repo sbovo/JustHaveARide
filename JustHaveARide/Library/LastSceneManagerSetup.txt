@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HoloToolkit-Examples/Input/Scenes/MotionControllerTest.unity
+- path: Assets/Scenes/OutdoorWalking.unity
   isLoaded: 1
   isActive: 1
