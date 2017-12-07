@@ -26,7 +26,7 @@ namespace HoloToolkit.Unity.Boundary
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
         [SerializeField]
         [Tooltip("Approximate max Y height of your space.")]
-        private float boundaryHeight = 10f;
+        private float boundaryHeight = 50f;
         private Bounds boundaryBounds;
 #endif
 
@@ -91,7 +91,7 @@ namespace HoloToolkit.Unity.Boundary
 #if UNITY_WSA && UNITY_2017_2_OR_NEWER
 
             // Render the floor based on if you are in editor or immersive device.
-            RenderFloorQuad();
+            //RenderFloorQuad();
 
             // Render boundary if configured.
             SetBoundaryRendering();

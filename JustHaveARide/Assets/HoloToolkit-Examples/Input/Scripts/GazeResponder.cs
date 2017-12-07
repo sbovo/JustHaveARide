@@ -15,7 +15,14 @@ namespace HoloToolkit.Unity.InputModule.Tests
 
         private void Start()
         {
-            defaultMaterials = GetComponent<Renderer>().materials;
+            Renderer r = GetComponent<Renderer>();
+            
+            if (r == null)
+            {
+                r = GetComponentInChildren<Renderer>();
+            }
+
+            defaultMaterials = r.materials;
         }
 
         public void OnFocusEnter()

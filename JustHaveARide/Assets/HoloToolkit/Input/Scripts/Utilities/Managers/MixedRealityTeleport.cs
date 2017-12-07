@@ -45,6 +45,8 @@ namespace HoloToolkit.Unity.InputModule
         public float RotationSize = 45.0f;
         public float StrafeAmount = 0.5f;
 
+        public bool FlyAllowed = false;
+
         [SerializeField]
         private GameObject teleportMarker;
         private Animator animationController;
@@ -117,7 +119,7 @@ namespace HoloToolkit.Unity.InputModule
                 float leftX = Input.GetAxis(LeftThumbstickX);
                 float leftY = Input.GetAxis(LeftThumbstickY);
 
-                if (currentPointingSource == null && leftY > 0.8 && Math.Abs(leftX) < 0.3)
+                if (currentPointingSource == null && leftY > 0.8 && Math.Abs(leftX) < 50)
                 {
                     if (FocusManager.Instance.TryGetSinglePointer(out currentPointingSource))
                     {
@@ -302,16 +304,26 @@ namespace HoloToolkit.Unity.InputModule
         {
             FocusDetails focusDetails = FocusManager.Instance.GetFocusDetails(currentPointingSource);
 
-            if (focusDetails.Object != null && (Vector3.Dot(focusDetails.Normal, Vector3.up) > 0.90f))
+            if (FlyAllowed)
             {
+                isTeleportValid = true;
+
+                teleportMarker.transform.position = focusDetails.Point;
+            }
+            else if (focusDetails.Object != null && (Vector3.Dot(focusDetails.Normal, Vector3.up) > 0.90f))
+            {
+                Debug.Log("isTeleportValid = true");
                 isTeleportValid = true;
 
                 teleportMarker.transform.position = focusDetails.Point;
             }
             else
             {
+                Debug.Log("isTeleportValid = false");
                 isTeleportValid = false;
             }
+
+
 
             animationController.speed = isTeleportValid ? 1 : 0;
         }
