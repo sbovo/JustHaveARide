@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/OutdoorWalking.unity
+- path: Assets/Scenes/IslandWalk.unity
   isLoaded: 1
   isActive: 1

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: a91b3455c0ccbd1479d4d83e8873c56c
+  productGUID: 0d351bda5a83e2444886181127fc47b5
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -250,7 +250,7 @@ PlayerSettings:
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings:
   - m_BuildTarget: Metro
-    m_Enabled: 1
+    m_Enabled: 0
     m_Devices:
     - WindowsMR
   m_BuildTargetEnableVuforiaSettings: []
