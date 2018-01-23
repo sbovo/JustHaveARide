@@ -103,6 +103,8 @@ PlayerSettings:
   n3dsEnableVSync: 0
   ignoreAlphaClear: 0
   xboxOneResolution: 0
+  xboxOneSResolution: 0
+  xboxOneXResolution: 3
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
@@ -558,11 +560,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: JustHaveARide
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 0058c513d7b2d401
   metroApplicationDescription: JustHaveARide
   wsaImages: {}
   metroTileShortName: 
